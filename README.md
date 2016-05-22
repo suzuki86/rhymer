@@ -28,10 +28,14 @@ gem build rhymer.gemspec
 gem install rhymer-x.x.x.gem
 ```
 
+## Dependencies
+
+`natto`が利用できる必要があります。
+
 
 ## Usage
 
-`Rhymer::Parser.new`の引数に文章を渡すと、検査結果が含まれたインスタンスが生成されます。インスタンスの`rhymes"メソッドを実行すると、韻を踏んでいるフレーズの組み合わせの配列が返されます。
+`Rhymer::Parser.new`の引数に文章を渡すと、検査結果が含まれたインスタンスが生成されます。インスタンスの`rhymes`メソッドを実行すると、韻を踏んでいるフレーズの組み合わせの配列が返されます。
 
 ```
 require "rhymer"
