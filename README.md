@@ -55,7 +55,7 @@ end
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rhymer.
+Bug reports and pull requests are welcome on GitHub at https://github.com/suzuki86/rhymer.
 
 
 ## License
