@@ -1,5 +1,7 @@
 module Rhymer
   class Lyric
+    attr_reader :lyric
+
     def initialize(text)
       @lyric = []
       mecab.parse(text) do |m|
@@ -9,10 +11,6 @@ module Rhymer
 
     def mecab
       @mecab ||= Natto::MeCab.new
-    end
-
-    def lyric
-      @lyric
     end
 
     def nauns
