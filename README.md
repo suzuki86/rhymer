@@ -16,6 +16,12 @@ git clone https://github.com/suzuki86/rhymer.git
 cd rhymer
 ```
 
+必要なgemをインストールします。
+
+```
+bundle install
+```
+
 Gemをビルドします。
 
 ```
