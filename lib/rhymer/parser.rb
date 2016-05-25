@@ -3,6 +3,8 @@ module Rhymer
     VIBES_THRESHOLD_DEFAULT = 4
     PREFIX_LENGTH_DEFAULT = 4
 
+    attr_reader :lyric, :rhymes
+
     def initialize(text, config = { :vibes_threshold => VIBES_THRESHOLD_DEFAULT, :prefix_length => PREFIX_LENGTH_DEFAULT })
       text = remove_symbols(text)
       @lyric = Lyric.new(text)
@@ -137,14 +139,6 @@ module Rhymer
       end
 
       @rhymes = @rhymes.sort_by {|a, b, c| c }.reverse
-    end
-
-    def lyric
-      @lyric
-    end
-
-    def rhymes
-      @rhymes
     end
 
     def remove_html(text)
