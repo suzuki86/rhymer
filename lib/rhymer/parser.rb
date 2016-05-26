@@ -33,11 +33,8 @@ module Rhymer
         end
       end
 
-      result = []
       rhymes.each do |rhyme|
         prefixes = [[], []]
-        first_prefix = []
-        second_prefix = []
 
         %w(first second).each_with_index do |label, n|
           counter = 0
@@ -275,7 +272,6 @@ module Rhymer
 
       a = replace_consonant(a)
       b = replace_consonant(b)
-      length_diff = length_diff(a, b)
 
       if extract_vowel(a).length < 3 || extract_vowel(b).length < 3
         return 0
@@ -302,10 +298,6 @@ module Rhymer
       end
 
       score
-    end
-
-    def length_diff(a, b)
-      (a.length - b.length).abs
     end
   end
 end
