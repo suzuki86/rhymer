@@ -125,7 +125,7 @@ module Rhymer
         end
 
         if prefix_surfaces[0].empty? || prefix_surfaces[1].empty?
-          break
+          next
         end
 
         @rhymes << [
