@@ -2,7 +2,23 @@ language: ruby
 rvm:
     - 2.2.2
 before_install:
-  - sudo apt-get install mecab mecab-ipadic-utf8 libmecab-dev
+  - base_dir=`pwd`
+  - wget https://mecab.googlecode.com/files/mecab-0.996.tar.gz
+  - tar zxfv mecab-0.996.tar.gz
+  - cd mecab-0.996
+  - ./configure --enable-utf8-only
+  - make
+  - make check
+  - sudo make install
+  - sudo ldconfig
+  - cd $base_dir
+  - wget https://mecab.googlecode.com/files/mecab-ipadic-2.7.0-20070801.tar.gz
+  - tar zxfv mecab-ipadic-2.7.0-20070801.tar.gz
+  - cd mecab-ipadic-2.7.0-20070801
+  - ./configure --with-charset=utf8
+  - make
+  - sudo make install
+  - sudo ldconfig
   - gem install bundler
 before_script:
   - bundle install
