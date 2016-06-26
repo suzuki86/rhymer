@@ -2,6 +2,8 @@
 
 与えられた文章の中から韻を踏んでいるフレーズの組み合わせを見つけ出すライブラリです。
 
+[![Build Status](https://travis-ci.org/suzuki86/rhymer.svg?branch=master)](https://travis-ci.org/suzuki86/rhymer)
+
 ## Installation
 
 リポジトリをクローンします。
