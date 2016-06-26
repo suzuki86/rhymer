@@ -9,4 +9,9 @@ describe Rhymer::CLI do
       it { is_expected.to output("今日は良い天気 こんな日は自然に元気\n").to_stdout }
     end
   end
+
+  describe '#version' do
+    subject { -> { cli.version } }
+    it { is_expected.to output("rhymer #{Rhymer::VERSION}\n").to_stdout }
+  end
 end

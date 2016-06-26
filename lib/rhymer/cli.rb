@@ -2,6 +2,7 @@ require "thor"
 require "natto"
 require "rhymer/lyric"
 require "rhymer/parser"
+require "rhymer/version"
 
 module Rhymer
   class CLI < Thor
@@ -11,6 +12,12 @@ module Rhymer
       parser.rhymes.each do |rhyme|
         puts "#{rhyme[0]} #{rhyme[1]}"
       end
+    end
+
+    desc '-v, --version', 'Print the version'
+    map %w(-v --version) => :version
+    def version
+      puts "rhymer #{Rhymer::VERSION}"
     end
   end
 
