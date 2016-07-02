@@ -4,7 +4,7 @@
 
 [![Build Status](https://travis-ci.org/suzuki86/rhymer.svg?branch=master)](https://travis-ci.org/suzuki86/rhymer)
 
-## Installation
+## インストール方法
 
 リポジトリをクローンします。
 
@@ -36,16 +36,16 @@ gem build rhymer.gemspec
 gem install rhymer-x.x.x.gem
 ```
 
-## Dependencies
+## 依存関係
 
 `natto`、`thor`が利用できる必要があります。
 
 
-## Usage
+## 使用方法
 
 `Rhymer::Parser.new`の引数に文章を渡すと、検査結果が含まれたインスタンスが生成されます。インスタンスの`rhymes`メソッドを実行すると、韻を踏んでいるフレーズの組み合わせの配列が返されます。
 
-```
+```ruby
 require "rhymer"
 
 rhymer = Rhymer::Parser.new("今日はとても良い天気ですね。こんな日は自然に元気になります。")
@@ -71,10 +71,10 @@ rhymer spit 今日はとても良い天気ですね。こんな日は自然に�
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/suzuki86/rhymer.
+バグの報告やプルリクエストはお気軽にどうぞ。
 
 
-## License
+## ライセンス
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+[MIT License](http://opensource.org/licenses/MIT)
 
