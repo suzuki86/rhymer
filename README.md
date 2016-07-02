@@ -68,13 +68,10 @@ end
 rhymer spit 今日はとても良い天気ですね。こんな日は自然に元気になります。
 ```
 
-
-## Contributing
+## 開発への参加
 
 バグの報告やプルリクエストはお気軽にどうぞ。
-
 
 ## ライセンス
 
 [MIT License](http://opensource.org/licenses/MIT)
-
