@@ -30,4 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "natto", "~> 1.1.0"
   spec.add_runtime_dependency "thor", "~> 0.19.1"
   spec.add_development_dependency "rspec", "~> 3.4.0"
+  spec.add_development_dependency "simplecov", "~> 0.12.0"
 end
