@@ -19,6 +19,7 @@ before_install:
   - make
   - sudo make install
   - sudo ldconfig
+  - cd $base_dir
   - gem install bundler
 before_script:
   - bundle install
