@@ -13,14 +13,14 @@ module Rhymer
       @mecab ||= Natto::MeCab.new
     end
 
-    def nauns
-      nauns = {}
+    def nouns
+      nouns = {}
       lyric.each_with_index do |term, index|
         if term.feature.split(",")[0] == "名詞"
-          nauns.store(index, term)
+          nouns.store(index, term)
         end
       end
-      nauns
+      nouns
     end
   end
 end

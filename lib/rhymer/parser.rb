@@ -11,18 +11,18 @@ module Rhymer
       @rhymes = []
       consonants = []
 
-      @lyric.nauns.each do |naun|
+      @lyric.nouns.each do |noun|
         consonants << {
-          :position => naun[0],
-          :naun => romanize(naun[1].feature.split(",")[7])
+          :position => noun[0],
+          :noun => romanize(noun[1].feature.split(",")[7])
         }
       end
 
       rhymes = []
       consonants.combination(2) do |arr|
-        score = vibes(arr.first[:naun], arr.last[:naun])
+        score = vibes(arr.first[:noun], arr.last[:noun])
         if
-          arr.first[:naun] != arr.last[:naun] &&
+          arr.first[:noun] != arr.last[:noun] &&
           score > config[:vibes_threshold]
         then
           rhymes << {

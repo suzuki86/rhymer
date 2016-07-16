@@ -28,20 +28,20 @@ describe Rhymer::Lyric do
     it { is_expected.to be_instance_of Natto::MeCab }
   end
 
-  describe '#nauns' do
-    let(:nauns) do
+  describe '#nouns' do
+    let(:nouns) do
       {
         0 => an_instance_of(Natto::MeCabNode),
         4 => an_instance_of(Natto::MeCabNode)
       }
     end
 
-    subject { lyric.nauns }
-    it { is_expected.to include nauns }
+    subject { lyric.nouns }
+    it { is_expected.to include nouns }
 
     describe '#[0]' do
       describe '#feature' do
-        subject { lyric.nauns[0].feature }
+        subject { lyric.nouns[0].feature }
         it { is_expected.to match /\A名詞/ }
       end
     end
