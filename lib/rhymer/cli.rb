@@ -20,6 +20,4 @@ module Rhymer
       puts "rhymer #{Rhymer::VERSION}"
     end
   end
-
-  CLI.start
 end
